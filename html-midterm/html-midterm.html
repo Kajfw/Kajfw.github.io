@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
-
     <title>Error-Filled Page</title>
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <body>
+
     <h1>Welcome to My Error-Filled Page</h1>
-    
+
     <p>This is a paragraph with mismatched tags and missing closing tags.</p>
     
     <ol>
@@ -45,10 +45,9 @@
     </table>
     <img src="error.jpeg" alt="Error Image"> <!-- not sure how to fix this either-->
 
-    <center>This is centered text.</center>
+    <p style ="text-align:center" > This is centered text.</p>
 
-    <p>Text</p>
-    <body bgcolor="lightgray">
+    <p style = "color: lightgray"> Text</p>
 
     <input type="button" value="Click me">
 
@@ -64,17 +63,20 @@
     </dl>
 
     <ol>
-        <li> Language written instead of lang tag, changed to lang tag on line 4 and moved to line 2 </li>
+        <li> added !doctype before html on line 1 </li>
+        <li> Language instead of lang tag, changed to lang and moved from line 4 (under head) moved to line 2 </li>
+        <li> Added metadate Meta data on lines 5 and 6 </li>
         <li> unclosed h1 tag, added closing tag for h1 header line 9 </li>
         <li> No starting p tag, added opening p tag line 11 </li>
         <li> missmached list tags, changed /ul to /ol line 24 </li>
-        <li> no closing p tage, added closing /p tag on line 26 </li>
+        <li> no closing p tag, added closing /p tag on line 26 </li>
         <li> image missing alt text, added alt text on line 28 </li>
-        <li> image uses source = "" instead of src = "", changed source to src on line 46 </li>
         <li> Image closing tag used instead of /a, replaced img tag with /a line 30</li>
-        <li> not table closing tag, /table added on line 45 </li> <!-- not sure how to make the table actually work (missing lines)-->
-        <li> center tag on line 48 is obselete, better to put this in css line 48 </li> <!-- Ask about this in class-->
-        <li> bgcolor is not sapossed to be in p tag, created new body tag with background color gray on line 51</li>
+        <li> not table closing tag, /table added on line 45 </li> 
+        <li> image uses source = "" instead of src = "", changed source to src on line 46 </li>
+        <li> center tag on line 48 is obselete, better to put this in css, changed to p = "text-align:center" in opening p tag line 48</li> <!-- Ask about this in class-->
+        <li> bgcolor is not sapossed to be in p tag, changed bgcolor to style = "color: lightgray" line 51</li>
+        <li> <!--Unure weather there is something to change about the button element-->  </li>
         <li> unclosed comment, added -- > to close comment on line 54 </li>
         <li> Link without a closing anchor tag, added /a tag on line 56 </li>
         <li> incorrect nesting, moved the closing /em tag inside of the /p tag on line 58 </li>
