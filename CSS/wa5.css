@@ -1,0 +1,136 @@
+/* General styles - put these straight into your stylesheet */
+
+
+/* Chris Card */
+/* These are general page styles */
+body {
+    margin: 0;
+  }
+  
+html {
+    font-family: 'Helvetica neue', Arial, 'sans serif';
+    font-size: 10px;
+    background-color: #ccc;
+  }
+
+  h2, p {
+    margin: 0em;
+  }
+
+  
+  /* card header */
+  .card header{
+    background-image: linear-gradient(to bottom,rgba(0,0,0,0.1), rgba(0,0,0,0));
+    border-radius: 1.5em 1.5em 0 0;
+    padding: 1em;
+    height: 3em; /*is this text hight? */
+  }
+  h2{
+    font-size: 2em;
+    line-height: 1.5em;
+  }
+  
+  /* Main body of card */
+  .card {
+    width: 35em;
+    height: 22em;
+    margin: 5em auto;
+    background-color: red;
+    border: 0.2em solid black;
+    border-radius: 1.5em;
+  }
+
+  article {
+    height: 12em;
+    background-color: rgba(0,0,0,.2) ;
+  }
+
+  .card article p {
+    padding: 1em;
+    color:azure;
+    line-height: 1.35em;
+  }
+  
+  .card article img {
+    max-height: 100%;
+    float: right;
+  }
+  
+  /* Footer */
+  .card footer {
+    background-image: linear-gradient(to bottom,rgba(0,0,0,0), rgba(0,0,0,0.1));
+    border-radius: 0 0 1.5em 1.5em;
+    padding: 1em;
+    height: 3em; /*is this text hight? */
+  }
+  .card footer p {
+    font-size: 1.5em;
+    line-height: 1.5em;
+  }
+  
+
+/* my card styles */
+  .myCard{
+    font-family:serif;
+  }
+  
+  /* card header */
+  .myCard header{
+    background-image: linear-gradient(to bottom,rgba(0,0,0,0.3), rgba(0,0,0,0));
+    border-radius: 1.5em 1.5em 0 0;
+    padding: 1em;
+    height: 3em; /*is this text hight? */
+  }
+  .myCard header h2{
+    font-size: 2em;
+    line-height: 1.5em;
+  }
+  
+  /* Main body of card */
+  .myCard {
+    width: 35em;
+    height: 22em;
+    margin: 5em auto;
+    background-color: rgb(232, 213, 119);
+    border: 0.2em solid black;
+    border-radius: 1.5em;
+  }
+
+  .myCard article {
+    height: 12em;
+    background-color: rgba(89, 136, 254, 0.665) ;
+  }
+
+  .myCard article p{
+    padding: 1em;
+    padding-bottom: 0.2em;
+    color:azure;
+    line-height: 1.35em;
+  }
+
+  .myCard ul{
+    padding: 0em;
+    padding-left: 2em;
+    margin: 0em;
+    color:azure;
+    line-height: 1em;
+  }
+  
+  .myCard article img {
+    max-height: 100%;
+    float: right;
+  }
+  
+  /* Footer */
+  .myCard footer {
+    background-image: linear-gradient(to bottom,rgba(0,0,0,0), rgba(0,0,0,0.3));
+    border-radius: 0 0 1.5em 1.5em;
+    padding: 1em;
+    height: 3em; /*is this text hight? */
+  }
+  .myCard footer p {
+    font-size: 1.4em;
+    line-height: 2em;
+  }
+  
+  
