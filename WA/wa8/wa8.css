@@ -1,0 +1,68 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(205, 217, 255);
+}
+nav{
+    height: 50vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height:20px;
+    background-color: rgb(219, 129, 136);
+}
+nav a{
+    width:10vw;
+    text-align: center;
+    text-decoration: none;
+    color:rgb(227, 236, 255);
+    font-family: Helvetica, sans-serif;
+}
+
+
+img{
+    width:30vw;
+    height: 85vh;
+    animation-name: animateImage;
+    animation-duration: 3s;
+    animation-delay: 0ms;
+}
+
+
+#red-ball{
+    background-color: rgb(236, 209, 103);
+    width: 20px;
+    height:20px;
+    border-radius: 50%;
+    position: absolute;
+    left:5vw;
+    top:0;
+    transition: width 5s, height 5s, background-color 5s;
+}
+
+#red-ball:hover{
+    background-image: url(/WA/wa8/wa8img/matisseChess.png);
+    width: 90vw;
+    height: 90vh;
+}
+
+#red-ball:hover, #chesman{
+    opacity: 100;
+}
+
+@keyframes animateImage {
+    from{
+        margin-top: 100%;
+    } 
+    to{
+        margin-bottom: 0%;
+    }
+
+}
+
+h1 {
+    font-family: "Anta", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
