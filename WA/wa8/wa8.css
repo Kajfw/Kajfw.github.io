@@ -25,7 +25,7 @@ img{
     width:30vw;
     height: 85vh;
     animation-name: animateImage;
-    animation-duration: 3s;
+    animation-duration: 10s;
     animation-delay: 0ms;
 }
 
