@@ -4,8 +4,8 @@ body{
 }
 
 #header{
-    display: grid;
-    grid-template-columns: 2fr 3fr;
+    display: flex;
+    flex-direction: column;
     background-color: aliceblue;
     margin-top: 0px;
 
@@ -13,8 +13,20 @@ body{
 
 #header p {
     align-self: left;
-    margin-left: 5px;
-    margin-top: 5px;
+    padding: 5px;
+    margin-left: 0px;
+    margin-right: 0px;
+    background-color: rgb(235, 155, 81);
+    border-color: rgb(86, 166, 168);
+    border-color: black;
+    background-color: rgb(202, 117, 117);
+
+    color: rgb(0, 0, 0);
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    border-style:double;
+    border-width: 10px;
+    
 }
 
 #Logo{
@@ -26,9 +38,10 @@ body{
 }
 
 #Above{
-    grid-row: 1/2;
-    width: 40vw;
+    grid-row: 5/6;
+    width: 100vw;
     border: solid;
+    border: 0px;;
     z-index: 0;
 }
 
@@ -81,39 +94,72 @@ main .VertFlex{
     flex-direction: column;
     border-style: solid;
     border-color: black;
-    border-width: 2px;
+    border-width: 20px;
     border-radius: 0px;
     border-left: 0px;
     border-right: 0px;;
     margin-top: 0px;
     margin-bottom: 0px;
+    font-size: 14pt;
 }
 
 .mainB {
     border-style: none;
+    margin: 0px;
     
 }
 
 .drop{
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
-    border-radius: 0px;
+    border-radius: 3px;
     padding: 4px;
     margin-top: 2px;
     margin-bottom: 0px;
     position: relative;
     text-align: left;
     align-self: center;
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows: auto auto;
+    align-items: start;
+    align-content: start;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 15px;
+    
 }
+.Des{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 1;
+
+}
+
+.FA{
+    position: relative;
+    top: 10px;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row: 2;
+    align-self: flex-start;
+
+}
+
+.Rep{
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row: 2;
+}
+
 .details{
     display: block;
     flex-direction: column;
 }
 
-.drop:hover ~ details{
-    
-        display: block;
-        visibility: visible;
+.buttons p:hover{
+    background-color: rgb(202, 117, 117);
+    color: black;
 }
 .info{
     display: none;
@@ -137,13 +183,22 @@ div p {
     margin-bottom: auto;
 }
 
-div p .date{
-    border-width: 10px;
-    border-color: black;
-    margin-left: 0px;
-    text-align: left;
-    background-color: black;
+.Name {
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    padding-left: 10px;
+}
 
+.date{
+    font-weight: bold;
+    margin: 0px;
+    align-self: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding: 10px;
+    margin-left: 10px;
+    background-color: rgb(202, 117, 117);
+    border: solid;
 }
 
 .buttons{
@@ -156,7 +211,7 @@ div p .date{
     position: relative;
     right: 0px;
     max-width: 220px;
-    align-self: flex-end; /* How do I get these puttons to stic to the right of container */
+    /* How do I get these puttons to stic to the right of container */
 }
 
 .buttons p {
@@ -168,4 +223,45 @@ div p .date{
     margin-bottom: 5px;
     position: relative;
     
+}
+
+@media screen and (max-width: 660px)
+{
+    h1 {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #Logo{
+        position: relative;
+        align-self: center;
+    }
+
+    .drop{
+        margin: 10px;
+    }
+
+}
+
+@media screen and (max-width: 560px)
+{
+    .mainB {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .date {
+        margin-left: 0px;
+    }
+
+    .container {
+        border-width: 10px;
+    }
+}
+
+@media screen and (max-width: 828px)
+{
+    .date{
+        margin: 5px;
+    }
 }
