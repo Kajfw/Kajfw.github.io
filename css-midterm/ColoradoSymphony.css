@@ -12,7 +12,7 @@ body{
 }
 
 #header p {
-    align-self: left;
+    text-align: center;
     padding: 5px;
     margin-left: 0px;
     margin-right: 0px;
@@ -76,7 +76,6 @@ h2 {
 }
 
 .VertFlex{ 
-    display: flexbox;
     align-self: center;
     align-items: center;
     align-content: center;
