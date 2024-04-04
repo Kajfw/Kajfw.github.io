@@ -1,0 +1,51 @@
+h1 {
+  font-family: helvetica, arial, sans-serif;
+  text-align: center;
+  background-color: rgb(144, 188, 111);
+  padding: 10px;
+  border: solid;
+  border-width: 5px;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.491);
+}
+
+body {
+  width: 640px;
+  margin: 0 auto;
+  background-color: rgb(25, 115, 120);
+}
+
+.full-img {
+  position: relative;
+  display: block;
+  width: 640px;
+  height: 480px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 640px;
+  height: 480px;
+  background-color: rgba(0,0,0,0);
+}
+
+button {
+  border: 0;
+  border-radius: 5px;
+  background: rgba(0,0,0,100);
+  text-shadow: 1px 1px 1px rgb(143, 141, 141);
+  color: rgb(255, 208, 113);
+  border: 1px solid #999;
+  position: absolute;
+  cursor: pointer;
+  top: 2px;
+  left: 2px;
+}
+
+.thumb-bar img {
+  display: block;
+  width: 20%;
+  float: left;
+  cursor: pointer;
+}
