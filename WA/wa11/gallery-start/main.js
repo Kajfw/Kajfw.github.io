@@ -10,7 +10,7 @@ const overlay = document.querySelector('.overlay');
 const pics = ["./images/GPTempDownload.JPG","./images/IMG_0491.PNG","./images/IMG_4728.JPG","./images/IMG_4980.JPG","./images/IMG_6788.JPG"];
 
 /* Declaring the alternative text for each image file */
-const alt =["a human eye","maybe sand","flowers","egyptian glyphs","purple butterfly"]
+const alt =["A Chai Guy in dehli","Golie moment","Scuba","prayer","Kaj on the nile"]
 
 /* Looping through images */
 
