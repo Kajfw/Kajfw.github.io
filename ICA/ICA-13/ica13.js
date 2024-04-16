@@ -66,12 +66,12 @@ class Ball {
 
         if (this.x < 1 && this.x > -1)
         {
-            this.velx+=1;
+            this.velx+=2;
 
         }
         if (this.y < 1 && this.y > -1)
         {
-            this.vely+=1;
+            this.vely+=2;
         }
         
     }
