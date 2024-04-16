@@ -48,15 +48,15 @@ class Ball {
         {
             this.velx = -(this.velx);
         }
-        else if ((this.x - this.size) <= 0)
+        if ((this.x - this.size) <= 0)
         {
             this.velx = -(this.velx);
         }
-        else if ((this.y + this.size) >= height)
+        if ((this.y + this.size) >= height)
         {
             this.vely = -(this.vely);
         }
-        else if ((this.y - this.size) <= 0)
+        if ((this.y - this.size) <= 0)
         {
             this.vely = -(this.vely);
         }
@@ -64,15 +64,6 @@ class Ball {
         this.x += this.velx;
         this.y += this.vely;
 
-        if (this.x < 1 && this.x > -1)
-        {
-            this.velx+=2;
-
-        }
-        if (this.y < 1 && this.y > -1)
-        {
-            this.vely+=2;
-        }
         
     }
 
@@ -118,7 +109,7 @@ const balls = [];
 
 while(balls.length < 10)
 {
-    const size = random(3,20);
+    const size = random(7,20);
     const ball = new Ball (
         random(0+size,width-size),
         random(0+size,height-size),
