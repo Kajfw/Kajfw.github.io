@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <title>JSON: Task 1</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="sdf/CSS/index.css" />
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+  </body>
+  <script>
+    const section = document.querySelector('section');
+
+    let para1 = document.createElement('p');
+    let para2 = document.createElement('p');
+    let motherInfo = 'The mother cats are called ';
+    let kittenInfo;
+    const requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/tasks/json/sample.json';
+
+    fetch(requestURL)
+    .then(response => response.text())
+    .then(text => displayCatInfo(text))
+
+    function displayCatInfo(catString) {
+      let total = 0;
+      let male = 0;
+    
+      // Add your code here
+      console.log(catString);
+      let cats = JSON.parse(catString);
+      console.log(cats);
+      
+      let count= Object.keys(cats).length; 
+        console.log(count);
+
+        let allkitten = 0;
+        let allMen = 0;
+        let allWoman = 0;
+
+      for (let i = 0; i < count ; i++)
+      {
+        if (count - i == 1)
+        {
+            motherInfo += ", and ";
+        }
+        else if (i !== 0)
+        {
+            motherInfo += ", ";
+        }
+
+        motherInfo += cats[i].name;
+
+        if (count - i == 1)
+        {
+            motherInfo += ".";
+        }
+
+        let men = 0;
+        let women = 0;
+        let all = Object.keys(cats[i].kittens).length; 
+        console.log(cats[i].kittens[0].gender);
+
+        for (let j = 0; j < all; j++)
+        {
+            if(cats[i].kittens[j].gender == "f")
+            {
+                women ++;
+            }
+            else
+            {
+                men ++;
+            }
+        }
+
+        allkitten += all;
+        allMen += men;
+        allWoman += women;
+    
+      }
+
+      kittenInfo = "Total number of kittens: " + allkitten.toString() + " | Boy Kittens: " + allMen.toString() + " | Girl Kittens: " + allWoman.toString();
+
+      console.log(motherInfo);
+      //console.log(kittenInfo);
+
+      // Don't edit the code below here!
+
+      para1.textContent = motherInfo;
+      para2.textContent = kittenInfo;
+    }
+
+    section.appendChild(para1);
+    section.appendChild(para2);
+  </script>
+
+</html>
