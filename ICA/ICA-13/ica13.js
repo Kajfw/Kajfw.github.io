@@ -89,8 +89,8 @@ class Ball {
                 if (distance <= this.size + ball.size)
                 {
                     ball.color = this.color = randomRGB();
-                    const velOldx = this.velx + (random (-1,1));
-                    const velOldy = this.vely + (random (-1,1));
+                    const velOldx = this.velx;
+                    const velOldy = this.vely;
 
                     
                     this.velx = ball.velx;
