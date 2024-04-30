@@ -451,6 +451,8 @@ function vicotry ()
   
 function game (button,card){
     
+    console.log("lastval:" + lastVal);
+    console.log("lastval2:" + lastVal2);
 
         switch(draw) {
             case 0:
@@ -491,7 +493,7 @@ function game (button,card){
                 // console.log("lastCard" + lastVal);
                 // console.log("currcard" + card.value);
                 // console.log("button" + button)
-                if((card.value <= lastVal && button == "black") || (card.value >= lastVal && button == "red")){ // win case
+                if(((card.value < lastVal) && button == "black") || ((card.value > lastVal) && button == "red")){ // win case
                     
                     document.body.style.backgroundColor = "#7CFC00";
                     setTimeout(() => { 
@@ -501,6 +503,7 @@ function game (button,card){
                     twobuttonsTextOne.textContent = "Outside";
                     twobuttonsTextTwo.textContent = "Inbetween";
                     displayCards (card);
+                    lastVal2 = card.value;
 
                     
                     
@@ -515,6 +518,7 @@ function game (button,card){
 
                     draw = 0;
                     lastVal = -1;
+                    lastVal2 = -2;
                     twobuttonsTextOne.textContent = "red";
                     twobuttonsTextTwo.textContent = "black";
                     addScore(card.value);
@@ -527,8 +531,8 @@ function game (button,card){
                 // console.log("lastCard + 1" + lastVal);
                 // console.log("lastCard" + lastVal2);
                 // console.log("currcard" + card.value);
-                if( ((( lastVal >= card.value && card.value >= lastVal2) || ( lastVal <= card.value && card.value <= lastVal2)) && button == "black") ||
-                    (((lastVal <= card.value && card.value >= lastVal2) || (card.value >= lastVal2 && card.value >= lastVal)) && button == "red")){ // win case
+                if( ((( (lastVal >= card.value) && (card.value >= lastVal2)) || ( (lastVal <= card.value) && (card.value <= lastVal2))) && button == "black") ||
+                    ((((lastVal <= card.value) && (card.value >= lastVal2)) || ((card.value >= lastVal2) && (card.value >= lastVal))) && button == "red")){ // win case
                     
                     document.body.style.backgroundColor = "#7CFC00";
                     setTimeout(() => { 
@@ -819,117 +823,3 @@ suiteC.addEventListener("click", () => {
     game(4,card);
 });
 
-
-
-
-
-/*
-
-const docBody = document.querySelector("body")
-
-class cardBack{
-
-    constructor(value,src,xpos,ypos){
-        this.value = value;
-        this.src = src;
-        this.xpos = xpos;
-        this.ypos = ypos;
-    }
-
-    
-
-    make() {
-        const cardBody = document.createElement("div"); // creates a new card div
-        docBody.appendChild(cardBody);
-
-        cardBody.classList.add("cardBack"); // applys cardback to element
-
-        const img = document.createElement("img"); // creates an image with src
-        img.style.display = "none";
-        img.src = this.src;
-    
-        console.log(img.src);
-
-        img.alt = "cardback";
-        img.style.width = "auto";
-        img.style.height = "auto";
-
-        cardBody.appendChild(img);
-
-        //console.log(cardBody.img.src)
-
-        cardBody.style.top = (this.ypos.string + " px");
-        cardBody.style.left = (this.xpos.string + " px");
-        console.log(cardBody.style.top)
-
-        
-        cardBody.addEventListener("click",(this.flip(cardBody)))
-
-
-    }
-
-    flip(cardBody)
-    {
-        cardBody.className = "cardBack-animate";
-        cardBody.addEventListener("animationend", () => {
-            cardBody.style.top = "45vh";
-            cardBody.style.left = "45vw";
-            cardBody.img.display = "block";
-        });
-        
-        draw++;
-        
-
-        switch(draw) {
-            case 1:
-              this.color();
-              break;
-            case 2:
-              this.highLow();
-              break;
-            case 3:
-                this.outsideInbetween();
-                break;
-            case 4: 
-                this.suit();
-                break;
-            case 5:
-                this.vicotry();
-                return 1;
-            default:
-                console.log("global var draw is not a value 1 - 5");
-        }
-    }
-
-    color()
-    {
-
-    }
-
-    highLow()
-    {
-
-    }
-
-    outsideInbetween()
-    {
-
-    }
-
-    suit()
-    {
-
-    }
-
-    vicotry()
-    {
-
-    }
-
-
-}
-
-const card = new cardBack(1,"/css-midterm/2023.03.31_Colorado-Symphony-Orchestra-Promo-Photo.webp",100,100);
-console.log(card);
-card.make();
-*/
