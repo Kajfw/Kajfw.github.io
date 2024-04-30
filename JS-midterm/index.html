@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/JS-midterm/css.css">
+</head>
+<body>
+    <div class = "cardBack"> 
+        <img src="/JS-midterm/card back black.png" alt="card had back">
+    </div> <!-- This the the class for the back of the card-->
+    <div class="cardfliped">
+        <img id = "fIMG" src = "" >     
+    </div> <!-- This the the class for the font of the card-->
+    <div class = "cardmove"> 
+        <img src="/JS-midterm/card back black.png" alt="card is moving">
+    </div>
+
+    <p id = "points"> VOLUME: 0</p>
+
+    <div class = "cardList"> <p> <em> Previous Cards: </em> </p> <ol> 
+        <li> <p id = "firtDrawn"> none </p> </li>
+        <li> <p id = "secondDrawn"> none </p> </li>
+        <li> <p id = "thirdDrawn"> none </p> </li>
+        </ol>
+        <p id = "Vol"> VOLUME: 0 </p>
+    </div>
+
+    
+
+    <div id = "speaker"> </div> <!-- Speaker icon-->
+    <div class = "TwoButtons"> <p id="TwoButtonsTextOne">First option</p> <p id="TwoButtonsTextTwo">Second option</p></div> <!-- This dive is for the red black, high low, outside inbetween buttons-->
+    <div class="Suite" > <p id = 'heart'>Hearts</p> <p id = 'spade'>Spades</p> <p id = 'diamond'>Diamond</p> <p id = 'club'>Clubs</p> </div> <!-- THis button allows user to gues/ select wich suit they think the next card will be -->
+    <div class = "bar"> <!-- this batr is a volume bar -->
+        <div id = "fill"> <!-- this is another div that will expand and contract from the top of the bar to imitate the volume increasing -->
+        </div>
+        <p>50%</p> <!-- This is meant to represent the amount of volume the user has achieved -->
+    </div> 
+</body> 
+</html>
+<script src = "/JS-midterm/js.js"></script>
+

@@ -1,0 +1,237 @@
+html{
+    background-color: rgb(14, 69, 179);
+}
+
+body {
+    margin: 0;
+}
+
+.cardList{
+    background-color: #cccccc;
+    border-radius: 2px;
+    position: absolute;
+    right: 5px;
+    margin: 10px;
+    padding: 10px;
+    padding-top: 0px;
+}
+
+#points{
+    font-size: larger;
+    color: #cccccc;
+    position: absolute;
+    top: 90vh;
+    left: 10vw;
+}
+
+#firstDrawn{
+
+}
+
+#secondDrawn{
+
+}
+
+#thirdDrawn{
+
+}
+
+.cardList ol{
+    padding: 15px;
+}
+
+.cardBack{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 2px;
+    width: 100px;
+    height: 140px;
+}
+
+.cardBack img {
+    height: 140px;
+    width: 100px;
+}
+
+.cardmove{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 2px;
+    width: 100px;
+    height: 140px;
+}
+
+.cardmove img {
+    height: 140px;
+    width: 100px;
+}
+
+.cardfliped{
+    position: absolute;
+    top: 45vh;
+    left: 45vw;
+    border: none;
+    width: 100px;
+    height: 140px;
+}
+
+.cardfliped img {
+    height: 140px;
+    width: 100px;
+    border: none;
+}
+
+
+
+.cardBack-animate{
+    animation: flip 1s .5s 1;
+}
+
+@keyframes flip {
+    0%{
+        top: 0;
+        left: 0;
+    }
+
+    99%{
+        top: 45vh;
+        left: 45vw;
+    }
+    
+}
+
+.cardFront{
+    position: absolute;
+    top: 45vh;
+    left: 45vw;
+    border-radius: 2px;
+    width: 100px;
+    height: 140px;
+
+    
+    background-image: url(/JS-midterm/PNG-cards-1.3/ace_of_spades.png);
+
+    background-color: #cccccc; /* Used if the image is unavailable */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.cardFront p {
+    padding-top: 15px;
+    font-size: 20pt;
+    margin-top: 10px;
+}
+
+#speaker {
+    height: 50px;
+    width: 50px;
+    background-image: url(/JS-midterm/Change\ colume\ icon.png);
+    position: absolute;
+    top: 90vh;
+    left: 10vw;
+    
+
+    height: 50px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.TwoButtons{
+    position: sticky;
+    top: 80vh;
+    max-width: 500px;
+    margin: auto;
+    
+}
+
+#TwoButtonsTextOne{
+    text-align: center;
+    margin: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    background-color: #cccccc;
+    border-radius: 5px;
+
+    
+}
+
+#TwoButtonsTextOne:hover{
+    background-color: aqua;
+}
+
+#TwoButtonsTextTwo{
+    text-align: center;
+    margin: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    background-color: #cccccc;
+    border-radius: 5px;
+}
+
+#TwoButtonsTextTwo:hover{
+    background-color: aqua;
+}
+
+.Suite{
+    position: sticky;
+    max-width: 500px;
+    margin: auto;
+    top: 80vh;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.Suite p{
+    text-align: center;
+    margin: 2px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    background-color: #cccccc;
+    border-radius: 5px;
+}
+
+.Suite p:hover{
+    background-color: aqua;
+}
+
+.bar{
+    background-color: green;
+
+    height: 700px;
+    width: 50px;
+
+    border-radius: 40px;
+    border: solid;
+    border-color: black;
+    border-width: 3px;
+    
+}
+
+.bar #fill{
+    width: 50px;
+    height: 350px;
+    align-self: bottom;
+    background-color: #cccccc;
+  
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.bar p{
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+    font-size: 18pt;
+    font-weight: 1000;
+    margin: 0;
+    text-align: center;
+    position:relative; 
+    bottom: 0;
+}
+
