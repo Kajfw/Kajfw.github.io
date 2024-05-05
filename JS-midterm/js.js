@@ -421,7 +421,7 @@ function addScore (score)
     points+= score;
     points = (points % 101);
 
-    const string = "VOLUME: " + points;
+    const string = "VOLUME : " + points;
     soundLevel.textContent = string;
 
 }
@@ -470,6 +470,8 @@ function game (button,card){
                 if(card.color == button){ // win case
                     setTimeout(() => { 
                         document.body.style.backgroundColor = "rgb(88, 215, 71)";
+                        twobuttonsTextOne.textContent = "High";
+                        twobuttonsTextTwo.textContent = "Low";
                     }, 1000);
                     
                     setTimeout(() => { 
@@ -477,8 +479,7 @@ function game (button,card){
                     }, 3000);
                     
                     draw++;
-                    twobuttonsTextOne.textContent = "High";
-                    twobuttonsTextTwo.textContent = "Low";
+                    
                     lastVal = card.value;
                     pIMG.src = card.src;
 
@@ -495,14 +496,15 @@ function game (button,card){
         
                     setTimeout(() => { 
                         document.body.style.backgroundColor = "#C41E3A";
+                        twobuttonsTextOne.textContent = "Red";
+                        twobuttonsTextTwo.textContent = "Black";
                     }, 1000);
                     
                     setTimeout(() => { 
                         document.body.style.backgroundColor = "rgb(54, 94, 174)";
                     }, 3000);
                     draw = 0;
-                    twobuttonsTextOne.textContent = "Red";
-                    twobuttonsTextTwo.textContent = "Black";
+                    
                     addScore(card.value);
                     //displayCards (0);
                     
@@ -518,14 +520,15 @@ function game (button,card){
                     setTimeout(() => { 
                         document.body.style.backgroundColor = "rgb(88, 215, 71)";
                         pIMG.style.visibility = "visible";
+                        twobuttonsTextOne.textContent = "Outside";
+                        twobuttonsTextTwo.textContent = "Inbetween";
                     }, 1000);
 
                     setTimeout(() => { 
                         document.body.style.backgroundColor = "rgb(54, 94, 174)";
                     }, 3000);
                     draw++;
-                    twobuttonsTextOne.textContent = "Outside";
-                    twobuttonsTextTwo.textContent = "Inbetween";
+                    
                     //displayCards (card);
                     lastVal2 = card.value;
                     //pIMG.src = card.src;
@@ -540,6 +543,8 @@ function game (button,card){
                     
                     setTimeout(() => { 
                         document.body.style.backgroundColor = "#C41E3A";
+                        twobuttonsTextOne.textContent = "Red";
+                        twobuttonsTextTwo.textContent = "Black";
                     }, 1000);
 
                     setTimeout(() => { 
@@ -549,8 +554,7 @@ function game (button,card){
                     draw = 0;
                     lastVal = -1;
                     lastVal2 = -2;
-                    twobuttonsTextOne.textContent = "Red";
-                    twobuttonsTextTwo.textContent = "Black";
+                    ;
                     addScore(card.value);
                     displayCards (0);
                     
@@ -571,14 +575,15 @@ function game (button,card){
                     setTimeout(() => { 
                         document.body.style.backgroundColor = "rgb(88, 215, 71)";
                         pIMG.style.visibility = "hidden";
+                        twobuttons.style.visibility = "hidden";
+                        Suite.style.visibility = "visible";
                     }, 1000);
 
                     setTimeout(() => { 
                         document.body.style.backgroundColor = "rgb(54, 94, 174)";
                     }, 3000);
                     draw++;
-                    twobuttons.style.visibility = "hidden";
-                    Suite.style.visibility = "visible";
+                    
                     //prevCards[2] = card.value + ' of ' + card.suit;
                     
 
@@ -591,6 +596,9 @@ function game (button,card){
                     setTimeout(() => { 
                         document.body.style.backgroundColor = "#C41E3A";
                         pIMG.style.visibility = "hidden";
+                        twobuttonsTextOne.textContent = "Red";
+                        twobuttonsTextTwo.textContent = "Black";
+                        twobuttons.style.visibility = "visible";
                     }, 1000);
 
                     setTimeout(() => { 
@@ -600,9 +608,7 @@ function game (button,card){
                     draw = 0;
                     lastVal = -1;
                     lastVal2 = -2;
-                    twobuttonsTextOne.textContent = "Red";
-                    twobuttonsTextTwo.textContent = "Black";
-                    twobuttons.style.visibility = "visible";
+                    
                     
                     addScore(card.value);
                     displayCards (0);
@@ -627,14 +633,15 @@ function game (button,card){
                         {
                             setTimeout(() => { 
                                 document.body.style.backgroundColor = "rgb(88, 215, 71)";
+                                twobuttons.style.visibility = "hidden";
+                                Suite.style.visibility = "visible";
                             }, 1000);
                             setTimeout(() => { 
                                 document.body.style.backgroundColor = "rgb(54, 94, 174)";
                                 vicotry();
                             }, 3000);
                             draw++;
-                            twobuttons.style.visibility = "hidden";
-                            Suite.style.visibility = "visible";
+                            
                             
                         }
                         else
@@ -642,6 +649,10 @@ function game (button,card){
                             setTimeout(() => { 
                                 document.body.style.backgroundColor = "#C41E3A";
                                 pIMG.style.visibility = "hidden";
+                                twobuttonsTextOne.textContent = "Red";
+                                twobuttonsTextTwo.textContent = "Black";
+                                twobuttons.style.visibility = "visible";
+                                Suite.style.visibility =  "hidden";
                             }, 1000);
 
                             setTimeout(() => { 
@@ -651,10 +662,7 @@ function game (button,card){
                             draw = 0;
                             lastVal = -1;
                             lastVal2 = -2;
-                            twobuttonsTextOne.textContent = "Red";
-                            twobuttonsTextTwo.textContent = "Black";
-                            twobuttons.style.visibility = "visible";
-                            Suite.style.visibility =  "hidden";
+                            
                             
                             addScore(card.value);
                         }
@@ -667,6 +675,8 @@ function game (button,card){
                         {
                             setTimeout(() => { 
                                 document.body.style.backgroundColor = "rgb(88, 215, 71)";
+                                twobuttons.style.visibility = "hidden";
+                                Suite.style.visibility = "visible";
                             }, 1000);
                             
                             setTimeout(() => { 
@@ -674,8 +684,7 @@ function game (button,card){
                                 vicotry();
                             }, 3000);
                             draw++;
-                            twobuttons.style.visibility = "hidden";
-                            Suite.style.visibility = "visible";
+                            
                             
                         }
                         else
@@ -683,6 +692,10 @@ function game (button,card){
                             setTimeout(() => { 
                                 document.body.style.backgroundColor = "#C41E3A";
                                 pIMG.style.visibility = "hidden";
+                                twobuttonsTextOne.textContent = "Red";
+                                twobuttonsTextTwo.textContent = "Black";
+                                twobuttons.style.visibility = "visible";
+                                Suite.style.visibility =  "hidden";
                             }, 1000);
 
                             setTimeout(() => { 
@@ -692,10 +705,7 @@ function game (button,card){
                             draw = 0;
                             lastVal = -1;
                             lastVal2 = -2;
-                            twobuttonsTextOne.textContent = "Red";
-                            twobuttonsTextTwo.textContent = "Black";
-                            twobuttons.style.visibility = "visible";
-                            Suite.style.visibility =  "hidden";
+                            
                             
                             addScore(card.value);
                         }
@@ -709,6 +719,8 @@ function game (button,card){
                         {
                             setTimeout(() => { 
                                 document.body.style.backgroundColor = "rgb(88, 215, 71)";
+                                twobuttons.style.visibility = "hidden";
+                                Suite.style.visibility = "visible";
                             }, 1000);
 
                             setTimeout(() => { 
@@ -716,8 +728,7 @@ function game (button,card){
                                 vicotry();
                             }, 3000);
                             draw++;
-                            twobuttons.style.visibility = "hidden";
-                            Suite.style.visibility = "visible";
+                            
                             
                         }
                         else
@@ -725,6 +736,10 @@ function game (button,card){
                             setTimeout(() => { 
                                 document.body.style.backgroundColor = "#C41E3A";
                                 pIMG.style.visibility = "hidden";
+                                twobuttonsTextOne.textContent = "Red";
+                                twobuttonsTextTwo.textContent = "Black";
+                                twobuttons.style.visibility = "visible";
+                                Suite.style.visibility =  "hidden";
                             }, 1000);
 
                             setTimeout(() => { 
@@ -734,10 +749,7 @@ function game (button,card){
                             draw = 0;
                             lastVal = -1;
                             lastVal2 = -2;
-                            twobuttonsTextOne.textContent = "Red";
-                            twobuttonsTextTwo.textContent = "Black";
-                            twobuttons.style.visibility = "visible";
-                            Suite.style.visibility =  "hidden";
+                            
                             
                             addScore(card.value);
                         }
@@ -751,6 +763,8 @@ function game (button,card){
                         {
                             setTimeout(() => { 
                                 document.body.style.backgroundColor = "rgb(88, 215, 71)";
+                                twobuttons.style.visibility = "hidden";
+                                Suite.style.visibility = "visible";
                             }, 1000);
 
                             setTimeout(() => { 
@@ -758,8 +772,7 @@ function game (button,card){
                                 vicotry();
                             }, 3000);
                             draw++;
-                            twobuttons.style.visibility = "hidden";
-                            Suite.style.visibility = "visible";
+                            
                             
                         }
                         else
@@ -767,6 +780,11 @@ function game (button,card){
                             setTimeout(() => { 
                                 document.body.style.backgroundColor = "#C41E3A";
                                 pIMG.style.visibility = "hidden";
+                                twobuttonsTextOne.textContent = "Red";
+                                twobuttonsTextTwo.textContent = "Black";
+                                twobuttons.style.visibility = "visible";
+                                Suite.style.visibility =  "hidden";
+                            
                             }, 1000);
 
                             setTimeout(() => { 
@@ -776,10 +794,6 @@ function game (button,card){
                             draw = 0;
                             lastVal = -1;
                             lastVal2 = -2;
-                            twobuttonsTextOne.textContent = "Red";
-                            twobuttonsTextTwo.textContent = "Black";
-                            twobuttons.style.visibility = "visible";
-                            Suite.style.visibility =  "hidden";
                             
                             addScore(card.value);
                         }
@@ -845,7 +859,7 @@ let bool = true;
 
 
 volume.addEventListener("click",() => { 
-    alert("To effect the volume on this device you will have to 'ride the bus'. Click okay when you are prepared to proceed");
+    alert("To effect the volume on this device you will have to 'ride the bus'. Click okay when you are prepared to proceed.");
     bool = true;
     console.log(bool)
 
