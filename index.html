@@ -3,22 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My website</title>
+    <title>My Portfolio Website</title>   
+    <link rel="stylesheet" href="/Porfolio assets/index.css">
     <style>
-        body {
-            background-color: aqua;
+        #home {
+        color: rgb(0, 0, 0);
+        text-decoration: underline;
         }
-        h1 {
-            color: rgb(137, 81, 14);
-            text-align: center;
-            font-size: 100px;
-        }
-
-    </style>    
-    <link rel="stylesheet" href="/CSS/index.css">
+    </style>
 </head>
 <body>
-    <h1> Hello World! </h1>
-    <p>My name is <em style="color: blueviolet;font-family: Verdana, Geneva, Tahoma, sans-serif;"> kaj </em></p>
-</body>
+    <!-- <h1> Kaj Weterrings </h1> -->
+    <nav class = "navbar">  
+        <img class="LetterHead" src="/Porfolio assets/Images/LetterHeadLarger.png" alt="A Letter k and w logo">
+        <ul>
+            <li><a href="/Porfolio assets/contact.html">Contact</a></li> <!-- Item 1 (furthest right) -->
+            <li><a href="/Porfolio assets/Images/ResumeRD2.pdf" target="_blank">Resume</a></li> <!-- Item 2 (2nd right) -->
+            <li><a href="/Porfolio assets/projects.html">Projects</a></li> <!-- Item 1 (3rd right) -->
+            <li class = "active"><a href="index.html">Home</a></li> <!-- Item 1 (furthest left) -->
+        </ul>
+    </nav>
+
+    <main>
+        <div class = "intro">
+            <img id ="headshot" src = "/Porfolio assets/Images/Headshot.jpg" alt="A professional looking picture of me">
+            <div id = "discription">
+                <h2>Hello,</h2>
+                <p>My name is Kaj Weterrings and I am Creative Technology and Design student at the University of Colorado Boulder. 
+                    I am passionate about developing innovative technologies that foster encourage positive interactions with the world around us. </p>
+            </div>
+        </div>
+    </main>    
+    </body>
 </html>
