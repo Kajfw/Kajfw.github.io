@@ -197,8 +197,14 @@ h1{
     padding: 10px;
     text-align: center;
     justify-content: center;
+    align-content: center;
 }
 
+.Ptit #imgPair{
+    object-fit: cover;
+    width: 100%;
+
+}
 
 
 .Ptit h1{
@@ -209,9 +215,59 @@ h1{
     text-align: center;
 }
 
-.Ptit #twoLamps img{
-    width: 100vw; 
-    height: 100vh; 
-    object-fit: cover;
-    object-position: 0% 0%; 
+.Ptit #sideText{
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+/*
+.contactContainer{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+*/
+
+.contactLeft{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.contactLeftTitle h2{
+    font-size: 36px;
+    margin-bottom: 5px;
+
+}
+
+.contactLeftTitle hr{
+    border: none;
+    width: 15vw;
+    height: 5px;
+    background-color: black;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.contactInputs{
+    width: 400px;
+    height: 50px;
+    font-weight: 500;
+    border-radius: 5px;
+    outline: none;
+}
+
+.contactInputs:focus{
+    border: 2px solid rgb(255, 0, 0);
+}
+
+.contactInputs::placeholder{
+    color: rgb(113, 113, 113);
+}
+
+.contactLeft textarea{
+    height: 140px;
+    
 }
